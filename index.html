@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonymous Forum</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Anonymous Forum</h1>
+            <div class="sort-options">
+                <button id="sort-newest">Newest First</button>
+                <button id="sort-comments">Most Comments</button>
+            </div>
+        </header>
+        
+        <main>
+            <section class="create-post">
+                <h2>Create a New Post</h2>
+                <form id="post-form">
+                    <input type="text" id="post-title" placeholder="Title" required>
+                    <textarea id="post-content" placeholder="Content" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+            
+            <section class="posts-list">
+                <h2>Recent Posts</h2>
+                <div id="posts-container"></div>
+            </section>
+            
+            <div id="post-detail-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div id="post-detail"></div>
+                    <div class="add-comment">
+                        <h3>Add a Comment</h3>
+                        <form id="comment-form">
+                            <textarea id="comment-content" placeholder="Your comment..." required></textarea>
+                            <input type="hidden" id="comment-parent-id">
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
+                    <div id="comments-container"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="/js/script.js"></script>
+</body>
+</html>
